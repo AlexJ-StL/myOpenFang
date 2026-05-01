@@ -188,16 +188,16 @@ For Gemini specifically, either `GEMINI_API_KEY` or `GOOGLE_API_KEY` will work.
 | **Models** | 10 |
 
 **Available Models:**
-- `openrouter/google/gemini-3.1-flash-lite-preview` (Smart) -- cheap, fast, 1M context (default)
-- `openrouter/google/anthropic/claude-sonnet-4.6` (Frontier) -- Anthropic Claude Sonnet 4.6
+- `openrouter/minimax/minimax-m2.5:free` (Smart) -- Minimax M2.5, free (default)
+- `openrouter/openrouter/owl-alpha` (Smart) -- OpenRouter Owl Alpha, free
 - `openrouter/qwen/qwen3.6-plus` (Smart) -- Qwen 3.6 Plus
-- `openrouter/nvidia/nemotron-3-super-120b-a12b:free` (Smart) -- Nvidia Nemotron 3 Super 120b-a12b
-- `openrouter/xiaomi/mimo-v2.5-pro` (Smart) -- Xiaomi MiMo v2.5 Pro
-- `openrouter/minimax/minimax-m2.5:free` (Fast) -- Minimax M2.5 free
-- `openrouter/google/gemini-3.1-pro-preview-customtools` (Frontier) -- Gemini 3.1 Pro Preview Custom Tools
-- `openrouter/moonshotai/kimi-k2.6` (Smart) -- MoonshotAI Kimi K2.6
 - `openrouter/google/gemma-4-31b-it:free` (Fast) -- Gemma 4 31B, free
-- `openrouter/stepfun/step-3.5-flash` (Fast) -- Stepfun Step 3.5 Flash
+- `openrouter/nvidia/nemotron-3-super-120b-a12b:free` (Fast) -- Nvidia Nemotron 3 Super 120b-a12b
+- `openrouter/moonshotai/kimi-k2.6` (Balanced) -- MoonshotAI Kimi K2.6
+- `openrouter/x-ai/grok-4.3` (Frontier) -- xAI Grok 4.3
+- `openrouter/xiaomi/mimo-v2.5-pro` (Balanced) -- Xiaomi MiMo v2.5 Pro
+- `openrouter/deepseek/deepseek-v4-pro` (Frontier) -- DeepSeek V4 Pro
+- `openrouter/deepseek/deepseek-v4-flash` (Smart) -- DeepSeek V4 Flash
 
 **Setup:**
 1. Sign up at [openrouter.ai](https://openrouter.ai)
@@ -573,16 +573,16 @@ The complete catalog of all 51 builtin models, sorted by provider. Pricing is pe
 | 16 | `mixtral-8x7b-32768` | Mixtral 8x7B | groq | Balanced | 32,768 | 4,096 | $0.024 | $0.024 | Yes | No |
 | 17 | `llama-3.1-8b-instant` | Llama 3.1 8B | groq | Fast | 128,000 | 8,192 | $0.05 | $0.08 | Yes | No |
 | 18 | `gemma2-9b-it` | Gemma 2 9B | groq | Fast | 8,192 | 4,096 | $0.02 | $0.02 | No | No |
-| 19 | `openrouter/google/gemini-3.1-flash-lite-preview` | Gemini 3.1 Flash Lite (OpenRouter) | openrouter | Balanced | 1,048,576 | 65,536 | $0.25 | $1.5 | Yes | Yes |
-| 20 | `openrouter/anthropic/claude-sonnet-4.6` | Claude Sonnet 4.6 (OpenRouter) | openrouter | Frontier | 1,00,000 | 128,000 | $3.00 | $15.00 | Yes | Yes |
-| 21 | `openrouter/qwen/qwen3.6-plus` | Qwen 3.6 Plus (OpenRouter) | openrouter | Smart | 1,000,000 | 65,500 | $0.325 | $1.95 | Yes | No |
-| 22 | `openrouter/nvidia/nemotron-3-super-120b-a12b:free` | Nvidia Nemotron 3 120B-a12B Free (OpenRouter) | openrouter | Smart | 262,100 | 262,100 | $0.00 | $0.00 | Yes | No |
-| 23 | `openrouter/xiaomi/mimo-v2.5-pro` | MiMo v2.5 (OpenRouter) | openrouter | Balanced | 1,050,000 | 131,100 | $1.00 | $3.00 | Yes | No |
-| 24 | `openrouter/minimax/minimax-m2.5:free` | MiniMax M2.5 Free (OpenRouter) | openrouter | Fast | 196,000 | 8,200 | $0.00 | $0.00 | Yes | No |
-| 25 | `openrouter/google/gemini-3.1-pro-preview-customtools` | Gemini 3.1 Pro Preview Custom Tool (OpenRouter) | openrouter | Frontier | 1,050,000 | 65,500 | $2.00 | $12.00 | Yes | Yes |
-| 26 | `openrouter/moonshotai/kimi-k2.6` | Kimi K2.6 (OpenRouter) | openrouter | Smart | 262,100 | 262,100 | $0.80 | $3.50 | Yes | No |
-| 27 | `openrouter/google/gemma-4-31b-it:free` | Gemma 4 31B (OpenRouter) | openrouter | Fast | 262,100 | 32,800 | $0.00 | $0.00 | Yes | No |
-| 28 | `openrouter/stepfun/step-3.5-flash` | Step 3.5 Flash (OpenRouter) | openrouter | Fast | 128,000 | 32,768 | $0.10 | $0.30 | Yes | No |
+| 19 | openrouter/minimax/minimax-m2.5:free | Minimax M2.5 free (OpenRouter) | openrouter | Smart | 196,608 | 8,256 | $0.00 | $0.00 | Yes | Yes |
+| 20 | openrouter/openrouter/owl-alpha | Owl Alpha (OpenRouter) | openrouter | Smart | 1,048,756 | 65,536 | $0.00 | $0.00 | Yes | No |
+| 21 | openrouter/qwen/qwen3.6-plus | Qwen3.6 Plus (OpenRouter) | openrouter | Smart | 262,144 | 262,144 | $0.325 | $1.95 | Yes | Yes |
+| 22 | openrouter/google/gemma-4-31b-it:free | Gemma 4 31B free (OpenRouter) | openrouter | Fast | 262,144 | 32,800 | $0.00 | $0.00 | Yes | Yes |
+| 23 | openrouter/nvidia/nemotron-3-super-120b-a12b:free | Nvidia Nemotron 3 Super 120b-a12b free (OpenRouter) | openrouter | Fast | 262,144 | 262,144 | $0.00 | $0.00 | Yes | No |
+| 24 | openrouter/moonshotai/kimi-k2.6 | MoonshotAI Kimi K2.6 (OpenRouter) | openrouter | Balanced | 262,142 | 262,142 | $0.74 | $3.49 | Yes | Yes |
+| 25 | openrouter/x-ai/grok-4.3 | xAI Grok 4.3 (OpenRouter) | openrouter | Frontier | 1,000,000 | 1,000,000 | $1.25 | $2.50 | Yes | Yes |
+| 26 | openrouter/xiaomi/mimo-v2.5-pro | Xiaomi MiMo-V2.5-Pro (OpenRouter) | openrouter | Balanced | 1,048,576 | 131,100 | $1.00 | $3.00 | Yes | Yes |
+| 27 | openrouter/deepseek/deepseek-v4-pro | DeepSeek V4 Pro (OpenRouter) | openrouter | Frontier | 1,048,576 | 384,000 | $0.435 | $0.87 | Yes | Yes |
+| 28 | deepseek/deepseek-v4-flash | DeepSeek V4 Flash (OpenRouter) | openrouter | Smart | 1,048,576 | 384,000 | $0.14 | $0.28 | Yes | Yes |
 | 29 | `mistral-large-latest` | Mistral Large | mistral | Smart | 128,000 | 8,192 | $2.00 | $6.00 | Yes | No |
 | 30 | `codestral-latest` | Codestral | mistral | Smart | 32,000 | 8,192 | $0.30 | $0.90 | Yes | No |
 | 31 | `mistral-small-latest` | Mistral Small | mistral | Fast | 128,000 | 8,192 | $0.10 | $0.30 | Yes | No |

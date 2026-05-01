@@ -3,11 +3,18 @@ version = "0.1.0"
 description = "Teaching and explanation agent for learning, tutoring, and educational content creation."
 author = "openfang"
 module = "builtin:chat"
-tags = ["education", "teaching", "tutoring", "learning", "explanation", "knowledge"]
+tags = [
+    "education",
+    "teaching",
+    "tutoring",
+    "learning",
+    "explanation",
+    "knowledge",
+]
 
 [model]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "google/gemma-4-31b-it:free"
 api_key_env = "OPENROUTER_API_KEY"
 max_tokens = 8192
 temperature = 0.5
@@ -61,7 +68,15 @@ max_llm_tokens_per_hour = 200000
 max_concurrent_tools = 5
 
 [capabilities]
-tools = ["file_read", "file_write", "file_list", "memory_store", "memory_recall", "shell_exec", "web_fetch"]
+tools = [
+    "file_read",
+    "file_write",
+    "file_list",
+    "memory_store",
+    "memory_recall",
+    "shell_exec",
+    "web_fetch",
+]
 network = ["*"]
 memory_read = ["*"]
 memory_write = ["self.*", "shared.*"]

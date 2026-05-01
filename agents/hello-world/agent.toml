@@ -6,7 +6,7 @@ module = "builtin:chat"
 
 [model]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "minimax/minimax-m2.5:free"
 api_key_env = "OPENROUTER_API_KEY"
 max_tokens = 4096
 temperature = 0.6
@@ -23,7 +23,14 @@ Keep responses brief (2-4 paragraphs max) unless the user asks for detail."""
 max_llm_tokens_per_hour = 100000
 
 [capabilities]
-tools = ["file_read", "file_list", "web_fetch", "web_search", "memory_store", "memory_recall"]
+tools = [
+    "file_read",
+    "file_list",
+    "web_fetch",
+    "web_search",
+    "memory_store",
+    "memory_recall",
+]
 network = ["*"]
 memory_read = ["*"]
 memory_write = ["self.*"]

@@ -74,7 +74,7 @@ const PROVIDERS: &[ProviderInfo] = &[
         env_var: "OPENROUTER_API_KEY",
         default_model: "openrouter/minimax/minimax-m2.5:free",
         needs_key: true,
-        hint: "",
+        hint: "free",
     },
     ProviderInfo {
         name: "together",

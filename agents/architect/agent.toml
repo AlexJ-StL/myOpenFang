@@ -32,14 +32,20 @@ When asked to review, be honest about weaknesses."""
 
 [[fallback_models]]
 provider = "openrouter"
-model = "deepseek/deepseek-v4-pro"
+model = "xiaomi/mimo-v2.5-pro"
 api_key_env = "OPENROUTER_API_KEY"
 
 [resources]
 max_llm_tokens_per_hour = 200000
 
 [capabilities]
-tools = ["file_read", "file_list", "memory_store", "memory_recall", "agent_send"]
+tools = [
+    "file_read",
+    "file_list",
+    "memory_store",
+    "memory_recall",
+    "agent_send",
+]
 memory_read = ["*"]
 memory_write = ["self.*", "shared.*"]
 agent_message = ["*"]

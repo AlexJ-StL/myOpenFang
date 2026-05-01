@@ -3,11 +3,18 @@ version = "0.1.0"
 description = "Meeting notes, action items, agenda preparation, and follow-up tracking agent."
 author = "openfang"
 module = "builtin:chat"
-tags = ["meetings", "notes", "action-items", "agenda", "follow-up", "productivity"]
+tags = [
+    "meetings",
+    "notes",
+    "action-items",
+    "agenda",
+    "follow-up",
+    "productivity",
+]
 
 [model]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "minimax/minimax-m2.5:free"
 api_key_env = "OPENROUTER_API_KEY"
 max_tokens = 8192
 temperature = 0.3
@@ -60,6 +67,12 @@ max_llm_tokens_per_hour = 150000
 max_concurrent_tools = 5
 
 [capabilities]
-tools = ["file_read", "file_write", "file_list", "memory_store", "memory_recall"]
+tools = [
+    "file_read",
+    "file_write",
+    "file_list",
+    "memory_store",
+    "memory_recall",
+]
 memory_read = ["*"]
 memory_write = ["self.*", "shared.*"]

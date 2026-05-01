@@ -46,7 +46,7 @@ Be thorough but efficient — don't delegate trivially simple tasks."""
 
 [[fallback_models]]
 provider = "openrouter"
-model = "deepseek/deepseek-v4-pro"
+model = "minimax/minimax-m2.5:free"
 api_key_env = "OPENROUTER_API_KEY"
 
 [schedule]
@@ -56,7 +56,16 @@ continuous = { check_interval_secs = 120 }
 max_llm_tokens_per_hour = 500000
 
 [capabilities]
-tools = ["agent_send", "agent_spawn", "agent_list", "agent_kill", "memory_store", "memory_recall", "file_read", "file_write"]
+tools = [
+    "agent_send",
+    "agent_spawn",
+    "agent_list",
+    "agent_kill",
+    "memory_store",
+    "memory_recall",
+    "file_read",
+    "file_write",
+]
 memory_read = ["*"]
 memory_write = ["*"]
 agent_spawn = true

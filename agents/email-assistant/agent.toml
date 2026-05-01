@@ -3,7 +3,14 @@ version = "0.1.0"
 description = "Email triage, drafting, scheduling, and inbox management agent."
 author = "openfang"
 module = "builtin:chat"
-tags = ["email", "communication", "triage", "drafting", "scheduling", "productivity"]
+tags = [
+    "email",
+    "communication",
+    "triage",
+    "drafting",
+    "scheduling",
+    "productivity",
+]
 
 [model]
 provider = "openrouter"
@@ -49,7 +56,7 @@ You are thorough, discreet, and efficient. You treat every email as an opportuni
 
 [[fallback_models]]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "nx-ai/grok-4.3"
 api_key_env = "OPENROUTER_API_KEY"
 
 [resources]
@@ -57,7 +64,14 @@ max_llm_tokens_per_hour = 150000
 max_concurrent_tools = 5
 
 [capabilities]
-tools = ["file_read", "file_write", "file_list", "memory_store", "memory_recall", "web_fetch"]
+tools = [
+    "file_read",
+    "file_write",
+    "file_list",
+    "memory_store",
+    "memory_recall",
+    "web_fetch",
+]
 network = ["*"]
 memory_read = ["*"]
 memory_write = ["self.*", "shared.*"]

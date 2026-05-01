@@ -3,11 +3,18 @@ version = "0.1.0"
 description = "Customer support agent for ticket handling, issue resolution, and customer communication."
 author = "openfang"
 module = "builtin:chat"
-tags = ["support", "customer-service", "tickets", "helpdesk", "communication", "resolution"]
+tags = [
+    "support",
+    "customer-service",
+    "tickets",
+    "helpdesk",
+    "communication",
+    "resolution",
+]
 
 [model]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "deepseek/deepseek-v4-pro"
 api_key_env = "OPENROUTER_API_KEY"
 max_tokens = 4096
 temperature = 0.3
@@ -57,7 +64,7 @@ You are patient, empathetic, and solutions-focused. You turn frustrated customer
 
 [[fallback_models]]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "nx-ai/grok-4.3"
 api_key_env = "OPENROUTER_API_KEY"
 
 [resources]
@@ -65,7 +72,14 @@ max_llm_tokens_per_hour = 200000
 max_concurrent_tools = 5
 
 [capabilities]
-tools = ["file_read", "file_write", "file_list", "memory_store", "memory_recall", "web_fetch"]
+tools = [
+    "file_read",
+    "file_write",
+    "file_list",
+    "memory_store",
+    "memory_recall",
+    "web_fetch",
+]
 network = ["*"]
 memory_read = ["*"]
 memory_write = ["self.*", "shared.*"]

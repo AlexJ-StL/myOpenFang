@@ -3,11 +3,18 @@ version = "0.1.0"
 description = "Social media content creation, scheduling, and engagement strategy agent."
 author = "openfang"
 module = "builtin:chat"
-tags = ["social-media", "content", "marketing", "engagement", "scheduling", "analytics"]
+tags = [
+    "social-media",
+    "content",
+    "marketing",
+    "engagement",
+    "scheduling",
+    "analytics",
+]
 
 [model]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "x-ai/grok-4.3"
 api_key_env = "OPENROUTER_API_KEY"
 max_tokens = 4096
 temperature = 0.7
@@ -52,7 +59,7 @@ You are creative, culturally aware, and strategically minded. You balance creati
 
 [[fallback_models]]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "google/gemma-4-31b-it:free"
 api_key_env = "OPENROUTER_API_KEY"
 
 [resources]
@@ -60,7 +67,14 @@ max_llm_tokens_per_hour = 120000
 max_concurrent_tools = 5
 
 [capabilities]
-tools = ["file_read", "file_write", "file_list", "memory_store", "memory_recall", "web_fetch"]
+tools = [
+    "file_read",
+    "file_write",
+    "file_list",
+    "memory_store",
+    "memory_recall",
+    "web_fetch",
+]
 network = ["*"]
 memory_read = ["*"]
 memory_write = ["self.*", "shared.*"]

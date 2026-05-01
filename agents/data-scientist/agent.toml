@@ -6,7 +6,7 @@ module = "builtin:chat"
 
 [model]
 provider = "openrouter"
-model = "minimax/minimax-m2.5:free"
+model = "deepseek/deepseek-v4-pro"
 api_key_env = "OPENROUTER_API_KEY"
 max_tokens = 4096
 temperature = 0.3
@@ -37,14 +37,23 @@ Output format:
 
 [[fallback_models]]
 provider = "openrouter"
-model = "minimax/minimax-m2.5:free"
+model = "x-ai/grok-4.3"
 api_key_env = "OPENROUTER_API_KEY"
 
 [resources]
 max_llm_tokens_per_hour = 150000
 
 [capabilities]
-tools = ["file_read", "file_write", "file_list", "shell_exec", "web_search", "web_fetch", "memory_store", "memory_recall"]
+tools = [
+    "file_read",
+    "file_write",
+    "file_list",
+    "shell_exec",
+    "web_search",
+    "web_fetch",
+    "memory_store",
+    "memory_recall",
+]
 network = ["*"]
 memory_read = ["*"]
 memory_write = ["self.*", "shared.*"]

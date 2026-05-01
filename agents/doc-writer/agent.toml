@@ -35,13 +35,19 @@ Style guide:
 
 [[fallback_models]]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "x-ai/grok-4.3"
 api_key_env = "OPENROUTER_API_KEY"
 
 [resources]
 max_llm_tokens_per_hour = 200000
 
 [capabilities]
-tools = ["file_read", "file_write", "file_list", "memory_store", "memory_recall"]
+tools = [
+    "file_read",
+    "file_write",
+    "file_list",
+    "memory_store",
+    "memory_recall",
+]
 memory_read = ["*"]
 memory_write = ["self.*", "shared.*"]

@@ -7,7 +7,7 @@ tags = ["smart-home", "iot", "automation", "devices", "monitoring", "home"]
 
 [model]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "nminimax/minimax-m2.5:free"
 api_key_env = "OPENROUTER_API_KEY"
 max_tokens = 4096
 temperature = 0.2
@@ -61,7 +61,15 @@ max_llm_tokens_per_hour = 100000
 max_concurrent_tools = 10
 
 [capabilities]
-tools = ["file_read", "file_write", "file_list", "memory_store", "memory_recall", "shell_exec", "web_fetch"]
+tools = [
+    "file_read",
+    "file_write",
+    "file_list",
+    "memory_store",
+    "memory_recall",
+    "shell_exec",
+    "web_fetch",
+]
 network = ["*"]
 memory_read = ["*"]
 memory_write = ["self.*", "shared.*"]

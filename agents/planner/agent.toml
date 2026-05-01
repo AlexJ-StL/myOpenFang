@@ -6,7 +6,7 @@ module = "builtin:chat"
 
 [model]
 provider = "openrouter"
-model = "deepseek/deepseek-v4-pro"
+model = "minimax/minimax-m2.5:free"
 api_key_env = "OPENROUTER_API_KEY"
 max_tokens = 8192
 temperature = 0.3
@@ -46,7 +46,13 @@ api_key_env = "OPENROUTER_API_KEY"
 max_llm_tokens_per_hour = 200000
 
 [capabilities]
-tools = ["file_read", "file_list", "memory_store", "memory_recall", "agent_send"]
+tools = [
+    "file_read",
+    "file_list",
+    "memory_store",
+    "memory_recall",
+    "agent_send",
+]
 memory_read = ["*"]
 memory_write = ["self.*", "shared.*"]
 agent_message = ["*"]

@@ -6,7 +6,7 @@ module = "builtin:chat"
 
 [model]
 provider = "openrouter"
-model = "nvidia/nemotron-3-super-120b-a12b:free"
+model = "minimax/minimax-m2.5:free"
 api_key_env = "OPENROUTER_API_KEY"
 max_tokens = 2048
 temperature = 0.2
@@ -39,4 +39,12 @@ max_llm_tokens_per_hour = 50000
 tools = ["shell_exec", "file_read", "file_list"]
 memory_read = ["*"]
 memory_write = ["self.*"]
-shell = ["docker *", "git *", "cargo *", "systemctl *", "ps *", "df *", "free *"]
+shell = [
+    "docker *",
+    "git *",
+    "cargo *",
+    "systemctl *",
+    "ps *",
+    "df *",
+    "free *",
+]
