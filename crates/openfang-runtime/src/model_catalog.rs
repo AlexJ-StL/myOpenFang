@@ -1013,9 +1013,35 @@ fn builtin_aliases() -> HashMap<String, String> {
         ("qwen-coder-plus", "qwen-code/qwen-coder-plus"),
         ("qwq", "qwen-code/qwq-32b"),
         // OpenRouter free-tier aliases
-        ("openrouter/free", "openrouter/minimax/minimax-m2.5:free"),
-        ("free", "openrouter/minimax/minimax-m2.5:free"),
-        ("free-reasoning", "openrouter/minimax-m2.5:free"),
+        (
+            "openrouter-minimax-m2.5-free",
+            "openrouter/minimax/minimax-m2.5:free",
+        ),
+        (
+            "openrouter-gemma-4-31b-free",
+            "openrouter/google/gemma-4-31b-it:free",
+        ),
+        (
+            "openrouter-nemotron-3-super-free",
+            "openrouter/nvidia/nemotron-3-super-120b-a12b:free",
+        ),
+        //OpenRouter non-free-tier aliases
+        ("openrouter-owl-alpha", "openrouter/openrouter/owl-alpha"),
+        ("openrouter-qwen3.6-plus", "openrouter/qwen/qwen3.6-plus"),
+        ("openrouter-kimi-k2.6", "openrouter/moonshotai/kimi-k2.6"),
+        ("openrouter-grok-4.3", "openrouter/x-ai/grok-4.3"),
+        (
+            "openrouter-mimo-v2.5-pro",
+            "openrouter/xiaomi/mimo-v2.5-pro",
+        ),
+        (
+            "openrouter-deepseek-v4-pro",
+            "openrouter/deepseek/deepseek-v4-pro",
+        ),
+        (
+            "openrouter-deepseek-v4-flash",
+            "openrouter/deepseek/deepseek-v4-flash",
+        ),
     ];
     pairs
         .into_iter()
